@@ -1,0 +1,419 @@
+:root {
+  --Tpink: rgb(239, 0, 135);
+  --Tblue: #00b2cd;
+  --Taqren: rgb(0, 245, 212);
+  --Tviolet: rgb(155, 93, 229);
+  --Tyellow: rgb(254, 228, 64);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: black;
+  color: var(--Tpink);
+}
+
+main {
+  background: radial-gradient(rgba(0, 0, 0, 0.8), black);
+  color: aliceblue;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+main i {
+  content: "";
+  width: 36vmin;
+  height: 36vmin;
+  background-color: var(--Tpink);
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  right: 22%;
+  bottom: 5%;
+  box-shadow: 0 0 12px rgb(254, 94, 185), inset 0 0 12px var(--Tpink);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main i:nth-child(2) {
+  background-color: var(--Tblue);
+  width: 30vmin;
+  height: 30vmin;
+  left: 22%;
+  top: 5%;
+  box-shadow: 0 0 12px #04d1f1, inset 0 0 12px var(--Tblue);
+}
+main i:nth-child(3) {
+  background-color: var(--Taqren);
+  width: 38vmin;
+  height: 38vmin;
+  right: -5%;
+  top: -5%;
+  box-shadow: 0 0 12px rgb(51, 254, 227), inset 0 0 12px var(--Taqren);
+}
+main i:nth-child(4) {
+  background-color: var(--Tyellow);
+  width: 40vmin;
+  height: 40vmin;
+  left: -2%;
+  bottom: -5%;
+  box-shadow: 0 0 12px rgb(248, 231, 124), inset 0 0 12px var(--Tyellow);
+}
+
+.container {
+  width: 50rem;
+  height: 50rem;
+  background-color: rgba(16, 16, 16, 0.2);
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.6),
+    inset 4px 4px 26px rgba(0, 0, 0, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container h1 {
+  font-size: 5rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  height: 12%;
+  letter-spacing: 0.5rem;
+  animation: glowText 3s ease infinite;
+}
+
+.content {
+  width: 100%;
+  height: 85%;
+}
+
+.displayScreen {
+  width: 95%;
+  height: 95%;
+  font-size: 2.2rem;
+  padding: 1rem;
+  margin: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+.mode,
+.symbol {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  font-size: 3rem;
+}
+
+.mode h3,
+.symbol h3 {
+  text-shadow: 0 0 12px black;
+}
+
+.mode div,
+.symbol div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  column-gap: 4rem;
+}
+
+.mode div label,
+.symbol div label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  margin-inline: 1.2rem;
+  text-shadow: 0 0 10px black;
+  transition: all ease 0.2s;
+}
+
+.symbol div label {
+  font-size: 4.5rem;
+}
+.symbol div label:hover {
+  -webkit-text-stroke: 0.1rem var(--Tblue);
+  text-shadow: 0 0 20px var(--Tblue), 0 0 15px black;
+}
+
+.mode div input,
+.symbol div input {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.mode div label:hover {
+  -webkit-text-stroke: 0.1rem var(--Tviolet);
+  text-shadow: 0 0 20px var(--Tviolet), 0 0 15px black;
+}
+
+.mode button,
+.symbol button {
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 10rem;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mode button {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 5px var(--Tpink);
+  text-shadow: 0 0 5px var(--Tviolet), 0 0 10px var(--Tpink);
+}
+
+.symbol button {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 5px var(--Taqren);
+  text-shadow: 0 0 5px var(--Tblue), 0 0 10px var(--Taqren);
+}
+
+.mode button:hover {
+  transform: scale(0.9);
+  animation: glare 0.5s ease-in-out 1;
+}
+
+.symbol button:hover {
+  --Tpink: rgb(0, 245, 212);
+  transform: scale(0.9);
+  animation: glare 0.5s ease-in-out 1;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6rem;
+}
+
+.game .gameBoard {
+  display: grid;
+  width: 21rem;
+  height: 21rem;
+  font-size: 3rem;
+  /* place-items: center;   */
+  grid-template-columns: repeat(3, auto);
+  text-shadow: 0 0 10px black;
+  margin: 0.5rem;
+}
+.game .gameBoard .box {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.game .gameBoard .box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.game .players {
+  display: flex;
+  gap: 5.5rem;
+  cursor: default;
+  font-size: 2.2rem;
+}
+
+.game .players .turn {
+  font-size: 2.5rem;
+  color: #00ff04;
+  text-shadow: 0 0 20px #00ff04, 0 0 10px #000;
+}
+
+#b1,
+#b2,
+#b4,
+#b5 {
+  border-right: 0.3rem solid white;
+  border-bottom: 0.3rem solid white;
+}
+#b7,
+#b8 {
+  border-right: 0.3rem solid white;
+}
+#b3,
+#b6 {
+  border-bottom: 0.3rem solid white;
+}
+
+.result {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  opacity: 0; /* will be 1 later */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3rem);
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  transition: transform 0.8s ease-in 0.1s, opacity 0.8s ease-in 0.1s;
+  overflow: hidden;
+  display: none;
+}
+.result h3 {
+  font-size: 3rem;
+  height: fit-content;
+}
+.result #visual {
+  font-size: 5rem;
+  padding-block: 2rem;
+  height: fit-content;
+  pointer-events: none;
+}
+
+.result button {
+  font-size: 2.5rem;
+  width: max-content;
+  height: max-content;
+  padding: 1rem 2rem;
+  border-radius: 5.2rem;
+  margin-inline: auto;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: border 0.3s ease-in-out;
+  animation: borderMove 1s linear infinite;
+}
+.result button:hover {
+  transform: scale(1.1);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes glare {
+  0% {
+    background: -webkit-linear-gradient(
+      45deg,
+      var(--Tpink),
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+  25% {
+    background: -webkit-linear-gradient(
+      45deg,
+      transparent,
+      var(--Tpink),
+      transparent,
+      transparent
+    );
+  }
+  50% {
+    background: -webkit-linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      var(--Tpink),
+      transparent
+    );
+  }
+  75% {
+    background: -webkit-linear-gradient(
+      45deg,
+      transparent,
+      transparent,
+      transparent,
+      var(--Tpink)
+    );
+  }
+  100% {
+    background: -webkit-linear-gradient(45deg, transparent, transparent);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px var(--Tyellow);
+  }
+  25% {
+    text-shadow: 0 0 10px var(--Tpink);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--Tviolet);
+  }
+  75% {
+    text-shadow: 0 0 10px var(--Tblue);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--Taqren);
+  }
+}
+
+@keyframes borderMove {
+  0% {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid var(--Taqren);
+    text-shadow: 0 0 10px var(--Taqren);
+    box-shadow: 0 0 5px var(--Taqren);
+  }
+  33.3% {
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 2px solid var(--Tblue);
+    text-shadow: 0 0 10px var(--Tblue);
+    box-shadow: 0 0 5px var(--Tblue);
+  }
+  63.3% {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid var(--Tpink);
+    text-shadow: 0 0 10px var(--Tpink);
+    box-shadow: 0 0 5px var(--Tpink);
+  }
+  100% {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid var(--Tyellow);
+    text-shadow: 0 0 10px var(--Tyellow);
+    box-shadow: 0 0 5px var(--Tyellow);
+  }
+}
+
+@media (width < 400px) {
+  .container h1 {
+    font-size: 4rem;
+  }
+}
