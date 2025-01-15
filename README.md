@@ -3,7 +3,7 @@ This is a simple Tic Tac Toe game with a stylish UI, featuring cool gradient col
 
 ## Features
 
-- **Game Modes:** Human vs. Human, and a Computer mode (under development).
+- **Game Modes:** Human vs. Human, and a Computer mode.
 - **Symbols:** Choose between 'X' and 'O'.
 - **Responsive Design:** Works well on various screen sizes.
 - **Visual Effects:** Cool gradient colors and animations.
@@ -30,9 +30,8 @@ This is a simple Tic Tac Toe game with a stylish UI, featuring cool gradient col
 
 ## Future Enhancements
 
-1. Implement the Computer mode functionality.
-2. Add more game features and customization options.
-3. Improve AI for the Computer mode.
+1. Add more game features and customization options.
+2. Improve AI for the Computer mode.
 
 ## Contact
 
